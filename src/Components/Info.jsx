@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export const Info = () => {
 
   const [data, setData] = useState({});
+  const navigate = useNavigate();
   
   const onChange = (e) => {
       const {name, value} = e.target;
@@ -18,7 +20,7 @@ export const Info = () => {
         alert( "Fill All the Details" );
     } 
     else{
-
+        navigate( "/register", {state : {data : data }} );
     }
   }
 
