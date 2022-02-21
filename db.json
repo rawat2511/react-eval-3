@@ -1,9 +1,47 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "data": {
+        "qualification": "12th",
+        "passingYear": "2010",
+        "date": "2022-02-24",
+        "gender": "other",
+        "state": "Bihar"
+      },
+      "data1": {
+        "name": "SHUBHAM",
+        "email": "SHUBHAM25112000@GMAIL.COM",
+        "password": "jjjj"
+      },
+      "id": 1
+    },
+    {
+      "name": "SHUBHAM",
+      "email": "SHUBHAM25112000@GMAIL.COM",
+      "password": "jjjj",
+      "id": 2
+    },
+    {
+      "qualification": "12th",
+      "passingYear": "2010",
+      "date": "2022-02-24",
+      "gender": "other",
+      "state": "Bihar",
+      "name": "SHUBHAM",
+      "email": "SHUBHAM25112000@GMAIL.COM",
+      "password": "jjjj",
+      "id": 3
+    },
+    {
+      "name": "SHUBHAM",
+      "email": "SHUBHAM25112000@GMAIL.COM",
+      "password": "jjjj",
+      "qualification": "12th",
+      "passingYear": "2010",
+      "date": "2022-02-24",
+      "gender": "other",
+      "state": "Bihar",
+      "id": 4
     }
   ]
 }

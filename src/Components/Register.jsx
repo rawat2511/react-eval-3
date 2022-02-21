@@ -1,19 +1,43 @@
 import React, {useState} from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Register = () => {
   
   const { state } = useLocation();
   const { data } = state;
 
+  const navigate = useNavigate();
+
   const [data1, setData1] = useState({});
 
   
   console.log("Data LoCATION : ", data);
 
-  const addUser = (e) => {
+  const addUser = async (e) => {
       e.preventDefault();
       console.log(data1);
+
+      await fetch("https://tangy-watery-scion.glitch.me/todos2/", {
+          method: "POST",
+          body : JSON.stringify({...data1, ...data}),
+          headers : {
+              "Content-Type" : "application/json"
+          }
+      }).then(() => {
+          alert("User Successfull Registered !!!")
+          navigate("/");
+      }).catch(() => {
+          alert("Enter Proper Details");
+      })
+
+
+    //   await fetch("https://tangy-watery-scion.glitch.me/todos2/1", {
+    //       method: "DELETE",
+    //       body : JSON.stringify({...data1, ...data}),
+    //       headers : {
+    //           "Content-Type" : "application/json"
+    //       }
+    //   })
   }
 
   const onChange = (e) => {
